@@ -1,0 +1,58 @@
+@use "../utils/" as *;
+
+.planCard {
+  @include flex($direction: column);
+
+  border: 1px solid $lightgray;
+  border-radius: 5px;
+  padding: 15px;
+  height: 160px;
+  min-width: 130px;
+
+  @include bp("large") {
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+    gap: 20px;
+  }
+
+  //! Active state
+  &.active {
+    border-color: $darkblue;
+    background-color: $cream;
+  }
+
+  // ! hover State
+  &:hover {
+    border-color: $darkblue;
+    cursor: pointer;
+  }
+
+  &__icon {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 40px;
+
+    @include bp("large") {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    @include flex($direction: column);
+    gap: 5px;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__price {
+    color: $gray;
+    font-size: 14px;
+  }
+
+  &__offer {
+    font-size: 14px;
+  }
+}

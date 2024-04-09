@@ -1,0 +1,30 @@
+@use "../utils/" as *;
+
+.ssm {
+  display: none;
+  padding-top: 30px;
+
+  @include bp("large") {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(200);
+    z-index: -100;
+    background: {
+      image: $phonebg;
+      repeate: no-repeat;
+      size: cover;
+    }
+  }
+
+  ul {
+    @include flex($gap: 20px, $justify: center);
+
+    li {
+      list-style: none;
+      @include circle;
+    }
+  }
+}

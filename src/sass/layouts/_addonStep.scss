@@ -1,0 +1,14 @@
+@use "../utils/" as *;
+
+.addonsStep {
+  @include flex_step;
+
+  &__buttons {
+    @include flex($align: center, $justify: space-between);
+    margin-top: auto;
+
+    @include bp("large") {
+      @include navigation-mobile;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use "../utils/" as *;
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+
+  color: $white;
+  font-weight: 500;
+  margin-left: auto;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 6px 1px $gray;
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  &__next {
+    background-color: $darkblue;
+  }
+
+  &__confirm {
+    background-color: $blue;
+  }
+}

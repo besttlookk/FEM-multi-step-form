@@ -1,0 +1,46 @@
+@use "./variables" as *;
+
+@mixin flex_step {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@mixin flex($direction: row, $align: stretch, $justify: flex-start, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin navigation-mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  background-color: $white;
+}
+
+@mixin circle {
+  @include center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid $white;
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+
+  &.active {
+    background-color: $lightblue;
+    color: $darkblue;
+  }
+}

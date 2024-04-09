@@ -1,0 +1,27 @@
+@use "../utils/" as *;
+
+.infoStep {
+  @include flex_step;
+
+  @include bp("large") {
+    width: 100%;
+  }
+
+  form {
+    @include flex($direction: column, $justify: space-between);
+    flex-grow: 2;
+
+    @include bp("large") {
+      flex-grow: 1;
+    }
+  }
+
+  &__button {
+    margin-left: auto;
+
+    @include bp("large") {
+      @include navigation-mobile;
+      text-align: right;
+    }
+  }
+}

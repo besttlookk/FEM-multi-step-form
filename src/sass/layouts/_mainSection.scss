@@ -1,0 +1,10 @@
+@use "../utils/" as *;
+
+.mainSection {
+  padding: 30px 80px;
+  width: 100%;
+
+  @include bp("large") {
+    padding: 5px;
+  }
+}

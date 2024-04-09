@@ -1,0 +1,52 @@
+@use "../utils" as *;
+
+.addonCard {
+  @include flex($align: center, $gap: 20px);
+  min-width: 400px;
+  border: 1px solid $lightgray;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  //! HOVER STATE
+  &:hover {
+    border-color: $blue;
+  }
+
+  //! Active State
+  &.active {
+    border-color: $darkblue;
+    background-color: $cream;
+  }
+
+  &__checkbox {
+    @include center;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border: 1px solid $lightgray;
+
+    &.active {
+      background-color: $blue;
+    }
+  }
+
+  &__info {
+    & p:first-child {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    & p:last-child {
+      font-size: 14px;
+      color: $gray;
+    }
+  }
+
+  &__price {
+    margin-left: auto;
+    color: $darkblue;
+    font-size: 14px;
+  }
+}

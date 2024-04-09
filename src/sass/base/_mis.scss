@@ -1,0 +1,17 @@
+@use "../utils/" as *;
+
+.backBtn {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  color: $gray;
+
+  &:hover {
+    cursor: pointer;
+    color: $darkblue;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "plans": [
+    {
+      "id": 1,
+      "name": "arcade",
+      "monthly": "9",
+      "yearly": "90",
+      "url": "arcdeUrl"
+    },
+    { "id": 2, "name": "advanced", "monthly": "12", "yearly": "120" },
+    { "id": 3, "name": "pro", "monthly": "15", "yearly": "150" }
+  ],
+
+  "addons": [
+    {
+      "id": "1",
+      "name": "Online service",
+      "detail": "Access to multiplayer games",
+      "monthly": "1",
+      "yearly": "10"
+    },
+    {
+      "id": "2",
+      "name": "Large storage",
+      "detail": "Extra 1TB of cloud save",
+      "monthly": "2",
+      "yearly": "20"
+    },
+    {
+      "id": "3",
+      "name": "Customizable profile",
+      "detail": "Custom theme on your profile",
+      "monthly": "2",
+      "yearly": "20"
+    }
+  ]
+}

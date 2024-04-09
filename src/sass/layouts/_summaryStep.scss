@@ -1,0 +1,71 @@
+@use "../utils/" as *;
+
+.summaryStep {
+  @include flex_step;
+
+  &__buttons {
+    @include flex($align: center, $justify: space-between);
+    margin-top: auto;
+
+    @include bp("large") {
+      @include navigation-mobile;
+    }
+  }
+}
+
+.summary {
+  &__display {
+    background-color: $whitishgray;
+    padding: 10px;
+  }
+
+  &__top {
+    @include flex($align: center, $justify: space-between);
+    font-weight: 700;
+    border-bottom: 1px solid $lightgray;
+    padding-bottom: 20px;
+    color: $darkblue;
+
+    & a {
+      font-weight: 400;
+      margin-top: 5px;
+      display: inline-block;
+      font-size: 14px;
+      color: $gray;
+    }
+  }
+
+  &__bottom {
+    margin: 10px 0;
+  }
+
+  &__total {
+    @include flex($align: center, $justify: space-between);
+    padding: 10px;
+    margin-top: 10px;
+
+    & p:first-child {
+      font-size: 14px;
+      color: $gray;
+    }
+
+    & p:last-child {
+      font-weight: 700;
+      color: $blue;
+    }
+  }
+}
+
+.addOn_item {
+  @include flex($align: center, $justify: space-between);
+  margin-bottom: 10px;
+  font-size: 14px;
+
+  & p:first-child {
+    color: $gray;
+  }
+
+  & p:last-child {
+    color: $darkblue;
+  }
+}

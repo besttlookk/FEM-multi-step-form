@@ -1,0 +1,27 @@
+@use "../utils/" as *;
+
+body {
+  @include center;
+  background-color: $whitishgray;
+
+  @include bp("large") {
+    position: relative;
+    align-items: start;
+  }
+}
+
+main {
+  height: 70vh;
+  width: 850px;
+  background-color: $white;
+  border-radius: 10px;
+  display: flex;
+  padding: 15px;
+  box-shadow: 0px 0px 30px 1px $lightgray;
+
+  @include bp("large") {
+    height: 100%;
+    max-width: 90vw;
+    margin-top: 120px;
+  }
+}

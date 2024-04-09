@@ -1,0 +1,25 @@
+@use "../utils" as *;
+
+.step {
+  @include flex($align: center, $gap: 15px);
+
+  &__number {
+    @include circle;
+  }
+
+  &__info {
+    text-transform: uppercase;
+
+    & p:first-child {
+      color: $lightgray;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    & p:last-child {
+      font-weight: 700;
+      color: $white;
+    }
+  }
+}

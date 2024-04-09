@@ -1,0 +1,35 @@
+@use "../utils/" as *;
+
+.thankYouSection {
+  @include flex(
+    $align: center,
+    $justify: center,
+    $direction: column,
+    $gap: 20px
+  );
+  height: 100%;
+  padding: 0 15px;
+  line-height: 1.4;
+
+  @include bp("large") {
+    text-align: center;
+    padding: {
+      top: 40px;
+      bottom: 40px;
+    }
+  }
+
+  & img {
+    height: 60px;
+    width: 60px;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  & p:last-child {
+    color: $gray;
+  }
+}

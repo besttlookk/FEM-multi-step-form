@@ -1,0 +1,25 @@
+@use "../utils/" as *;
+
+.input {
+  @include flex($direction: column, $gap: 5px);
+  margin-bottom: 20px;
+
+  &__top {
+    @include flex($align: center, $justify: space-between);
+  }
+
+  &__error {
+    color: $red;
+    font-weight: 500;
+  }
+
+  &__element {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid $lightgray;
+
+    &:focus {
+      outline-color: $darkblue;
+    }
+  }
+}
