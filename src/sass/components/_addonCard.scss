@@ -9,6 +9,10 @@
   border-radius: 8px;
   cursor: pointer;
 
+  @include bp("large") {
+    min-width: 100%;
+  }
+
   //! HOVER STATE
   &:hover {
     border-color: $blue;
